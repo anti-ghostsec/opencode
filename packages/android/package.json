@@ -1,0 +1,29 @@
+{
+  "name": "@opencode/android",
+  "private": true,
+  "version": "2.0.26",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsgo -b",
+    "dev": "vite",
+    "build": "vite build",
+    "sync": "cap sync android",
+    "apk": "bun run build && cap sync android && cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/app": "8.1.1",
+    "@capacitor/browser": "8.0.4",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/local-notifications": "8.3.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "@opencode/app": "workspace:*",
+    "@types/node": "catalog:",
+    "@typescript/native-preview": "catalog:",
+    "solid-js": "catalog:",
+    "vite": "8.2.2"
+  }
+}
